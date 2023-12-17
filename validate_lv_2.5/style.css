@@ -1,0 +1,65 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.register{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+#form{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+}
+#form .group-input{
+    width: 100%;
+}
+.title{
+    font-size: 25px;
+    text-transform: uppercase;
+}
+#form .submit{
+    width: 100%;
+    padding:10px;
+    background: black;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.127);
+    border:none;
+    cursor: pointer;
+}
+#form input{
+    border:none;
+    border-bottom:1px solid black;
+    padding-left: 10px;
+    width: 100% ;
+    outline: none;
+    height: 40px;
+}
+#form input:focus ~ .error-effect .bottom-line{
+    width: 100%;
+}
+#form input:focus{
+    transition: .2s .25;
+    border-bottom:none;
+}
+.error-effect .bottom-line{
+    transition: .25s;
+    width: 0%;
+    height: 2px;
+    background: black;
+}
+.error-effect .error-mess{
+    color:red;
+    font-size: 12px;
+}
+.error-effect .bottom-line.active{
+    background: red;
+    width: 100%;
+}
